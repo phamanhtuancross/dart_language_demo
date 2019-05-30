@@ -1,3 +1,4 @@
+import 'package:app/NumberConverter.dart';
 import 'package:app/RandomNumber.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -50,7 +51,10 @@ class ButtonClickEventState extends State<ButtonClickEvent> {
                 child: Center(
                     child: Text(countValue.toString(),
                         style: TextStyle(fontSize: 25.0))),
-),
+)           ,
+            Container(
+              child: Text(NumberConverter.instance.convertNumberToVietnamesLanguages(countValue)),
+            ),
             RaisedButton(
               
               child: Text('RANDOM NUMBER', style: TextStyle(
