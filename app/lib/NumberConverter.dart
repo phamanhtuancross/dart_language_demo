@@ -21,10 +21,11 @@ class NumberConverter{
     else{
       int level = 0;
       while(tempNumber > 0){
-        result = this.getVietnamesSimpleValue((tempNumber%10).round()) + result;
-        result = this.getNumberValueLevel(level) + result;
-        level += 1;
-        tempNumber = (tempNumber/10).round();
+        result = " " + this.getVietnamesSimpleValue((tempNumber%10).ceil()) + result;
+        break;
+        //result = this.getNumberValueLevel(level) + result;
+        //level += 1;
+        //tempNumber = (tempNumber/10).ceil();
       }
     }
 
